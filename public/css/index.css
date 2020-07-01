@@ -1,0 +1,72 @@
+html {
+  background-color: #f2f2f2;
+}
+
+body {
+  color: #444;
+  font-family: 'Palatino', serif;
+}
+
+a:link,
+a:visited {
+  color: #444;
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Avenir Next', sans-serif;
+}
+
+article {
+  max-width: 400pt;
+  margin: 0 auto;
+}
+article p {
+  font-size: 16pt;
+  line-height: 22pt;
+}
+
+.article-divider {
+  border: none;
+  text-align: center;
+}
+.article-divider::after {
+  content: '・・・';
+  letter-spacing: 7pt;
+  opacity: 0.2;
+}
+
+.copyright {
+  text-align: center;
+  font-family: 'Avenir Next', sans-serif;
+  font-size: 14pt;
+  opacity: 0.2;
+}
+
+.add {
+  height: 70px;
+  width: 70px;
+  font-size: 60px;
+  margin-left: 48%;
+  cursor: pointer;
+}
+
+.heading {
+  height: 40px;
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+#blog {
+  height: 400px;
+  width: 505px;
+  font-size: 10pt;
+  font-weight: lighter;
+}
+
+.hidden {
+  visibility: hidden;
+}
