@@ -25,7 +25,7 @@ const postJSON = (url, data, callback) => {
 };
 
 const goToHome = function (res) {
-  document.location = '../index.html';
+  document.location = `../index.html`;
 };
 
 const saveBlog = function () {
@@ -34,3 +34,22 @@ const saveBlog = function () {
   blog.content = document.getElementById('blog').value;
   postJSON('post-blog', blog, goToHome);
 };
+
+const showBlogs = function (blogs) {
+  let element = '';
+  blogs.forEach((blog) => {
+    element += `<article>
+      <h1> ${blog.name} </h1>
+      <date>${blog.date}</date>
+      <p> ${blog.content} </p>
+      <hr class="article-divider" />
+    </article> `;
+  });
+  document.getElementById('container').innerHTML = element;
+};
+
+const main = function () {
+  getJSON('get-blogs', showBlogs);
+};
+
+window.onload = main;

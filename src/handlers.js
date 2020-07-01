@@ -15,4 +15,8 @@ const saveBlog = function (req, res) {
     .catch((err) => console.log(err));
 };
 
-module.exports = { saveBlog, attachAppDetails };
+const getBlogs = function (req, res) {
+  req.db.selectAll(`select * from blog;`).then((blogs) => res.json(blogs));
+};
+
+module.exports = { saveBlog, attachAppDetails, getBlogs };
